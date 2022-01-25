@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隨機晚餐</title>
+    <script src="../static/myJavascript.js"></script>
+    <script src="../static/jquery-3.6.0.js"></script>
+</head>
+<body>
+<h1>隨機晚餐</h1>
+<tr>
+    <button id="runRandombtn">執行隨機晚餐</button>
+    <button id="addDinnerbtn" onclick="location.href='/insertDinner'">增加晚餐</button>
+    <button id="listDinnerbtn" onclick="location.href='/listAllDinner'">查看晚餐清單</button>
+</tr>
+
+<div id="Result"></div>
+
+
+<script>
+    $(function () {
+        const $btn = $('#runRandombtn');
+        $btn.off("click").on("click", function () {
+            startRandom();
+        });
+    });
+
+</script>
+</body>
+
+</html>

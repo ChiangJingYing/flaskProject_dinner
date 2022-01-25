@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>晚餐清單</title>
+    <script src="../static/myJavascript.js"></script>
+    <script src="../static/jquery-3.6.0.js"></script>
+</head>
+<body>
+<h1>List all Dinner</h1>
+<tr>
+    <button onclick=location.href='/'>返回主頁</button>
+    <button id="ListALL">顯示清單</button>
+</tr>
+<table id="Result" border="1"></table>
+<script>
+    $(function () {
+        var $btn = $('#ListALL');
+        var tableTitle =
+            "<tr>" +
+            "<td>編號</td>" +
+            "<td>名稱</td>" +
+            "<td>星期一</td>" +
+            "<td>星期二</td>" +
+            "<td>星期三</td>" +
+            "<td>星期四</td>" +
+            "<td>星期五</td>" +
+            "<td>星期六</td>" +
+            "<td>星期日</td>" +
+            "</tr>";
+        $btn.off("click").on("click", function () {
+            queryPracticeResult(tableTitle);
+        });
+    });
+</script>
+</body>
+</html>
