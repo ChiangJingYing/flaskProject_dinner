@@ -80,34 +80,17 @@ var queryPracticeResult = function (tableTitle) {
             $.each(data, function (idx, val) {
                 view =
                     "<tr>" +
+                    "<td>" + (idx + 1) + "</td>" +
+                    "<td>" + val.Name + "</td>" +
+                    "<td>" + val.Mon + "</td>" +
+                    "<td>" + val.Thes + "</td>" +
+                    "<td>" + val.Wed + "</td>" +
+                    "<td>" + val.Thr + "</td>" +
+                    "<td>" + val.Fri + "</td>" +
+                    "<td>" + val.Sat + "</td>" +
+                    "<td>" + val.Sun + "</td>" +
                     "<td>" +
-                    (idx + 1) +
-                    "</td>" +
-                    "<td>" +
-                    val.Name +
-                    "</td>" +
-                    "<td>" +
-                    val.Mon +
-                    "</td>" +
-                    "<td>" +
-                    val.Thes +
-                    "</td>" +
-                    "<td>" +
-                    val.Wed +
-                    "</td>" +
-                    "<td>" +
-                    val.Thr +
-                    "</td>" +
-                    "<td>" +
-                    val.Fri +
-                    "</td>" +
-                    "<td>" +
-                    val.Sat +
-                    "</td>" +
-                    "<td>" +
-                    val.Sun +
-                    "</td>" +
-                    "<td>" +
+                    "<button onclick='ChangeDinner(" + val.ID + ")'>" + "修改" + "</button>" +
                     "<button onclick='DeleteDinner(" + val.ID + ")'>" + "刪除" + "</button>" +
                     "</td>" +
                     "</tr>";
@@ -145,4 +128,10 @@ var DeleteDinner = function (delete_id) {
             alert("Ajax request 發生錯誤");
         },
     });
+};
+var ChangeDinner = function () {
+    var $change = $('#Change_data');
+    $change.empty();
+    var view = "此功能尚未完成，請先以刪除再添加作為替代" + "<br/>" + "造成不便敬請見諒";
+    $change.append(view);
 };
