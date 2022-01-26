@@ -57,6 +57,19 @@ let Insert = function (href) {
 };
 var queryPracticeResult = function (tableTitle) {
     var $tbResult = $("#Result");
+    var tableTitle =
+        "<tr>" +
+        "<td>編號</td>" +
+        "<td>名稱</td>" +
+        "<td>星期一</td>" +
+        "<td>星期二</td>" +
+        "<td>星期三</td>" +
+        "<td>星期四</td>" +
+        "<td>星期五</td>" +
+        "<td>星期六</td>" +
+        "<td>星期日</td>" +
+        "<td>" + "   " + "</td>" +
+        "</tr>";
     $.ajax({
         url: "/listAll",
         data: {},
@@ -94,9 +107,39 @@ var queryPracticeResult = function (tableTitle) {
                     "<td>" +
                     val.Sun +
                     "</td>" +
+                    "<td>" +
+                    "<button onclick='DeleteDinner(" + val.ID + ")'>" + "刪除" + "</button>" +
+                    "</td>" +
                     "</tr>";
                 $tbResult.append(view);
             });
+        },
+        error: function (xhr) {
+            alert("Ajax request 發生錯誤");
+        },
+    });
+};
+var DeleteDinner = function (delete_id) {
+    let href = "/changeData/" + delete_id;
+    var tableTitle =
+        "<tr>" +
+        "<td>編號</td>" +
+        "<td>名稱</td>" +
+        "<td>星期一</td>" +
+        "<td>星期二</td>" +
+        "<td>星期三</td>" +
+        "<td>星期四</td>" +
+        "<td>星期五</td>" +
+        "<td>星期六</td>" +
+        "<td>星期日</td>" +
+        "<td>" + "   " + "</td>" +
+        "</tr>";
+    $.ajax({
+        url: href,
+        data: {},
+        type: "DELETE",
+        success: function (data) {
+            queryPracticeResult(tableTitle);
         },
         error: function (xhr) {
             alert("Ajax request 發生錯誤");
