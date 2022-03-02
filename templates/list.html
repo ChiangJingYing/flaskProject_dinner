@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <title>晚餐清單</title>
     <script src="../static/myJavascript.js"></script>
     <script src="../static/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/myCSS.css">
 </head>
 <body>
-<h1>晚餐清單</h1>
+<h1 class="titile">晚餐清單</h1>
 <tr>
-    <button onclick=location.href='/'>返回主頁</button>
-    <button id="ListALL">顯示清單</button>
+    <button onclick=location.href='/' class="FuncBtn">返回主頁</button>
+    <button id="ListALL" class="FuncBtn">顯示清單</button>
 </tr>
 <div id="Change_data"></div>
-<table id="Result" border="1"></table>
+<table id="Result" style="font-size: 24px" border="1"></table>
 <script>
     $(function () {
         var $btn = $('#ListALL');

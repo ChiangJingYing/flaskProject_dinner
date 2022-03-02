@@ -5,16 +5,17 @@
     <title>隨機晚餐</title>
     <script src="../static/myJavascript.js"></script>
     <script src="../static/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/myCSS.css">
 </head>
 <body>
-<h1>隨機晚餐</h1>
+<h1 class="titile">隨機晚餐</h1>
 <tr>
-    <button id="runRandombtn">執行隨機晚餐</button>
-    <button id="addDinnerbtn" onclick="location.href='/insertDinner'">增加晚餐</button>
-    <button id="listDinnerbtn" onclick="location.href='/listAllDinner'">查看晚餐清單</button>
+    <button id="runRandombtn" class="FuncBtn">執行隨機晚餐</button>
+    <button id="addDinnerbtn" class="FuncBtn" onclick="location.href='/insertDinner'">增加晚餐</button>
+    <button id="listDinnerbtn" class="FuncBtn" onclick="location.href='/listAllDinner'">查看晚餐清單</button>
 </tr>
 
-<div id="Result"></div>
+<div id="Result" style="font-size: 50px;width: 250px" class="result"></div>
 
 
 <script>

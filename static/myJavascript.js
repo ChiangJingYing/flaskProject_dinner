@@ -90,8 +90,8 @@ var queryPracticeResult = function (tableTitle) {
                     "<td>" + val.Sat + "</td>" +
                     "<td>" + val.Sun + "</td>" +
                     "<td>" +
-                    "<button onclick='ChangeDinner(" + val.ID + ")'>" + "修改" + "</button>" +
-                    "<button onclick='DeleteDinner(" + val.ID + ")'>" + "刪除" + "</button>" +
+                    "<button onclick='ChangeDinner(" + val.ID + ")' "+"class='tableBtn'>" + "修改" + "</button>" +
+                    "<button onclick='DeleteDinner(" + val.ID + ")'"+"class='tableBtn'>" + "刪除" + "</button>" +
                     "</td>" +
                     "</tr>";
                 $tbResult.append(view);

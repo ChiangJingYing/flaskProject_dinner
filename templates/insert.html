@@ -5,30 +5,32 @@
     <title>增加晚餐</title>
     <script src="../static/myJavascript.js"></script>
     <script src="../static/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/myCSS.css">
 </head>
 <body>
-<h1>增加晚餐</h1>
+<h1 class="titile">增加晚餐</h1>
 <tr>
     <form action="" id="inputForm">
-        晚餐名稱
-        <input type="Text" name="addData" id="inputBox" value=""><br>
+        <div style="font-size: 24px">
+            晚餐名稱
+            <input type="Text" name="addData" id="inputBox" value="" style="zoom: 120%"><br>
+        </div>
     </form>
-    開店星期
-    <td>
-        [一]<input type="checkbox" id="mon">
-        [二]<input type="checkbox" id="thes">
-        [三]<input type="checkbox" id="wed">
-        [四]<input type="checkbox" id="thr">
-        [五]<input type="checkbox" id="fri">
-        [六]<input type="checkbox" id="sat">
-        [日]<input type="checkbox" id="sun">
-    </td>
+    <div style="font-size: 24px">
+        開店星期
+        [一]<input type="checkbox" id="mon" style="zoom: 150%">
+        [二]<input type="checkbox" id="thes"style="zoom: 150%">
+        [三]<input type="checkbox" id="wed"style="zoom: 150%">
+        [四]<input type="checkbox" id="thr"style="zoom: 150%">
+        [五]<input type="checkbox" id="fri"style="zoom: 150%">
+        [六]<input type="checkbox" id="sat"style="zoom: 150%">
+        [日]<input type="checkbox" id="sun"style="zoom: 150%">
+    </div>
 
     <div id="Result"></div>
-</tr>
 <tr>
-    <button id="Insert">確認新增</button>
-    <button onclick=location.href='/'>返回主頁</button>
+    <button id="Insert" class="FuncBtn">確認新增</button>
+    <button onclick=location.href='/' class="FuncBtn">返回主頁</button>
 </tr>
 <script>
     $(function () {
