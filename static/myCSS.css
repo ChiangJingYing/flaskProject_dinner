@@ -1,0 +1,38 @@
+html{
+    font-family: "PingFang HK";
+}
+.titile{
+    font-size: 50px;
+    padding: 3px;
+    margin: 5px;
+}
+.FuncBtn{
+    font-size: 24px;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ddd5d9;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.FuncBtn:hover{
+    border: #fff7fb 2px;
+}
+.tableBtn{
+   font-size: 20px;
+    border-color: black;
+    border-radius: 15px;
+    background-color: #ddd5d9;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.tableBtn:hover{
+   border: #fff7fb 2px;
+}
+@keyframes fadein {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 2;}
+}
+.result{
+    animation: fadein 12s ;
+}

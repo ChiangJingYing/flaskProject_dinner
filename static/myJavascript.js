@@ -9,15 +9,17 @@ const startRandom = function () {
                 alert("There is nothing in the SQL");
             } else {
                 console.log(data)
-                document.getElementById("Result").innerHTML = data;
+                alert(data);
+                //document.getElementById("Result").innerHTML = data;
             }
         },
         error: function (xhr) {
-            alert("Ajax request 發生錯誤");
+            alert("ERROR! Please try it again. (-1)");
         },
     });
 };
 let Insert = function (href) {
+    console.log(href);
     const $checkMon = $('#mon').is(":checked");
     const $checkThes = $('#thes').is(":checked");
     const $checkWed = $('#wed').is(":checked");
